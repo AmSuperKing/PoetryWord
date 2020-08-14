@@ -1,0 +1,21 @@
+<!--pages/historytoday/historytoday.wxml-->
+
+<view class="page">
+
+  <!-- content -->
+  <scroll-view scroll-y class="scroll-view_H" style="height:{{sysheight}}rpx;">
+    
+    <view wx:for="{{history_today}}" wx:key="key_list">
+      <view class="content_title">{{item.title}}</view>
+      <view class="content_image"><image src="{{item.picUrl}}" class="content_img"></image></view>
+      <view class="content_details" >{{item.details}});</view>
+      <text>\n\n</text>
+      <view class="content_split"></view>
+      <text>\n\n</text>
+    </view>
+
+  </scroll-view> 
+  
+
+</view>
+

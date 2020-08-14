@@ -1,0 +1,25 @@
+<!--pages/searchword/searchword.wxml-->
+<view class="page">
+  <!-- nav -->
+  <view class="nav">
+  <image class="img" src="../../assets/icons/searchicon.png" bindtap="findWord"></image>
+    <input class="ipt" placeholder-class="pla" placeholder='请输入单个汉字，查询释义' bindconfirm='finish' value='{{value}}' bindinput ="wordInput"></input>
+  </view>
+  <!-- END nav -->
+
+  <!-- fun_btn -->
+  <view class="fun_btn">
+    <button class="fun_btn_desc" hover-class="fun_btn_desc_hover" bindtap="clean_result">清空</button>
+    <button class="fun_btn_desc" hover-class="fun_btn_desc_hover" bindtap="findWord">查找</button>
+  </view>
+
+  <!-- content -->
+  <scroll-view scroll-y class="scroll-view_H">
+    <view>{{pinyin}}</view>
+    <view wx:for="{{explanation}}" wx:key="key_list">
+      <view class="content_desc">{{item}}</view>
+    </view>
+  </scroll-view>
+  
+
+</view>

@@ -1,0 +1,30 @@
+<!--pages/translate/translate.wxml-->
+
+<view class="select_btns">
+  <picker name="from_picker" class="from_to_picker" value="{{pic_array_from[from_index].id}}" data-select="{{pic_array_from[from_index].name}}" range="{{pic_array_from}}" range-key="{{'name'}}"  bindchange="bindPickerChange_from"  >
+    <view class="from_picker" >{{pic_array_from[from_index].name}}</view>
+  </picker>
+  <image src="../../assets/icons/arrows.png" class="translate_img"></image>
+  <picker name="to_picker" class="from_to_picker" value="{{pic_array_to[to_index].id}}" data-select="{{pic_array_tp[to_index].name}}" range="{{pic_array_to}}" range-key="{{'name'}}"  bindchange="bindPickerChange_to"  >
+    <view class="picker" >{{pic_array_to[to_index].name}}</view>
+  </picker>
+</view>
+
+<view class="tips">原文：</view>
+<view class="txt">
+  <textarea id="from_text" class="text" maxlength="250" value="{{from_value}}" bindinput="getFrom"></textarea>
+</view>
+  
+<view class="select_btns">
+<button class="clean_btn" hover-class="clean_btn_hover" bindtap="clearTextArea">清空</button>
+  <button class="translate_btn" hover-class="translate_btn_hover" bindtap="translate">翻译</button> 
+</view>
+
+<view class="tips">翻译结果：</view>
+<view class="txt">
+  <textarea id="result_text" class="text" maxlength="250" value="{{result_value}}"></textarea>
+</view>
+  
+<view class="select_btns">
+  <button class="copy_btn" hover-class="copy_btn_hover" bindtap='copyText' data-text="{{result_value}}">复制结果</button>
+</view>

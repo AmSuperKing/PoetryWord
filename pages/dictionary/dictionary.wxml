@@ -1,0 +1,12 @@
+<!--pages/dictionary/dictionary.wxml-->
+<view class="page">
+
+<view class="fun_btn">
+  <view>
+    <button bindtap="searchword" class="btn" hover-class="btn_hover">中华字典</button>
+    <button bindtap="searchpoems" class="btn" hover-class="btn_hover">历史上的今天</button>
+    <button bindtap="translate" class="btn" hover-class="btn_hover">翻译助手</button>
+  </view>
+</view>
+
+</view>
